@@ -1,6 +1,3 @@
-// This file contains JavaScript code for the portfolio website. 
-// It may include functionality for interactive elements, animations, or form handling.
-
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav ul li a');
