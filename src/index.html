@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
-            <ul>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul id="primary-navigation" class="nav-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -22,269 +24,275 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-inner">
-            <img src="../files/profile.jpg" alt="Nechirvan Zibar — profile photo" class="profile-img">
-            <div class="hero-text">
-                <h1>Nechirvan Zibar</h1>
-                <p>Data Science &amp; AI Student | Autonomous Systems Engineer</p>
+    <main class="page">
+        <section id="home" class="section hero">
+            <div class="hero-inner">
+                <img src="../files/profile.jpg" alt="Nechirvan Zibar — profile photo" class="profile-img">
+                <div class="hero-text">
+                    <h1>Nechirvan Zibar</h1>
+                    <p>Data Science &amp; AI Student | Autonomous Systems Engineer</p>
+                </div>
             </div>
+        </section>
+
+        <section id="about" class="section section-card">
+            <h2>About Me</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025 - Present</td>
+                        <td>Leading a team of 6 autonomous system engineers at Formula Student team CURE Mannheim e.V.</td>
+                    </tr>
+                    <tr>
+                        <td>2023 - Present</td>
+                        <td>Volunteering at Formula Student team CURE Mannheim e.V. as an autonomous systems engineer</td>
+                    </tr>
+                    <tr>
+                        <td>2023 - 2026</td>
+                        <td>Started cooperative bachelor's degree program in Data Science and AI at DHBW Mannheim with DHL</td>
+                    </tr>
+                    <tr>
+                        <td>2023</td>
+                        <td>Graduated from high school with Abitur</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="spoken-languages-title">Spoken Languages</p>
+            <ul class="pill-list">
+                <li>German</li>
+                <li>English</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section section-card">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Electricity consumption and generation forecasting using Deep Learning algorithms for building management</h3>
+                        <p>Year: 2025</p>
+                        <p>Implemented a Bi-LSTM with Attention mechanism to learn global Time series patterns on electricity consumption and electricity generation</p>
+                        <p>Used real realtime electricity meters from thousands of buildings to train model and integrated predictions into PowerBI dashboard</p>
+                        <p>Results were compiled in a graded term paper and project was implemented in a production Microsoft Fabric instance</p>
+                        <p>Technologies used: Python, PySpark, Fabric, PyTorch, pandas</p>
+                        <p>Github repository: <a href="" target="_blank">Repository</a> Does not include paper. If you're interested, please <a href="#contact">contact</a> me directly</p>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Trajectory Planning algorithm for autonomous racing car</h3>
+                        <p>Year: 2024/25</p>
+                        <p>Implemented a SOTA trajectory planning algorithm in C++ for an autonomous Formula Student car as an optimal control problem</p>
+                        <p>Approach developed in Simulation by alumnus in Formula Student Team</p>
+                        <p>Uses acados C++ Solver to generate time-optimal and jerk-minimal trajectory on track with constraints on acceleration profile</p>
+                        <p>Algorithm validated in a ROS-integrated control-in-the-loop simulation and field-tested at the Formula Student Germany competition</p>
+                        <p>Technologies used: C++, Python, acados, CasADi, ROS</p>
+                    </div>
+                    <div class="project-media">
+                        <video width="640" height="360" controls>
+                            <source src="../files/MotionPlanning.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Path Planning algorithm for autonomous racing car</h3>
+                        <p>Year: 2023/24</p>
+                        <p>Implemented a path planning algorithm in Python for an autonomous formula student car using Delaunay triangulation</p>
+                        <p>Algorithm successfully field-tested and validated at the Formula Student competition in Italy</p>
+                        <p>Later ported into C++ for a drastic performance uplift: ~20ms to less than 1ms </p>
+                        <p>Technologies used: Python, NumPy, SciPy, ROS, C++</p>
+                    </div>
+                    <div class="project-media">
+                        <video width="640" height="360" controls>
+                            <source src="../files/PathPlanning.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Machine Learning Model for Predictive Maintenance</h3>
+                        <p>Year: 2024</p>
+                        <p>Pair project with a fellow student, results were compiled in a graded paper</p>
+                        <p>Built and trained a machine learning model to predict the remaining lifetime of a machine.</p>
+                        <p>Used EDA and feature selection as well as feature engineering algorithms to create an optimized dataset</p>
+                        <p>Model was trained using ensemble methods such as Random Forest and evaluated using cross validation</p>
+                        <p>Additional testing with comparisons between ML Models were done to determine best Model for use case</p>
+                        <p>Technologies used: Python, scikit-learn, TensorFlow, pandas, NumPy</p>
+                        <p>Github repository: <a href="https://github.com/NechZ/Predictive-Maintenance" target="_blank">Repository</a></p>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Unsupervised Learning Model to Create a Preventive Maintenance Plan for Delivery Service Packing Stations</h3>
+                        <p>Year: 2024</p>
+                        <p>Project using real company data to create and evaluate new maintenance plan, results were compiled in a graded term paper.</p>
+                        <p>Using Big Data methods to aggregate data from different sources and perform clustering and PCA to sort all stations into groups with similar maintenance needs</p>
+                        <p>Technologies used: Python, scikit-learn, pandas, NumPy</p>
+                        <p>Github repository: <a href="https://github.com/NechZ/Praxis_Arbeit1" target="_blank">Repository</a> Does not include paper. If you're interested, please <a href="#contact">contact</a> me directly</p>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Kahoot clone as Web app</h3>
+                        <p>Year: 2024</p>
+                        <p>Continuation of group project in collaboration with 5 other fellow students</p>
+                        <p>Developed a web app that allows users to create and play quizzes in real-time</p>
+                        <p>Implemented a WebSocket server to handle real-time communication between users</p>
+                        <p>Used Node.js and Express.js to create the backend and HTML, CSS, and JavaScript for the frontend</p>
+                        <p>Technologies used: HTML, CSS, JavaScript, Node.js, Express.js, WS WebSockets</p>
+                        <p>Github repository: <a href="https://github.com/NechZ/Kahoot2.0" target="_blank">Repository</a></p>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Mobile Game "Cube Game"</h3>
+                        <p>Year: 2021</p>
+                        <p>Developed a mobile endless runner game for Android with Levels and upgradable cosmetics</p>
+                        <p>Uploaded on Samsung Galaxy Store (now offline) and Amazon garnering ~2000 downloads</p>
+                        <p>Technologies used: Unity, C#</p>
+                    </div>
+                    <div class="project-media">
+                        <video width="180" height="360" controls>
+                            <source src="../files/CubeGame.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </li>
+                <li class="project-item">
+                    <div class="project-content">
+                        <h3>Mini Project: Flappy bird with AI Agents</h3>
+                        <p>Year: 2024</p>
+                        <p>Developed a Flappy Bird clone with PyGame, employing a deep neural network and NEAT (Neural Evolution of Augmenting Topologies) to train AI agents.</p>
+                        <p>Technologies used: Python, PyGame, NEAT-Python</p>
+                        <p>Github repository: <a href="https://github.com/NechZ/Flappy-Bird-ML" target="_blank">Repository</a></p>
+                    </div>
+                    <div class="project-media">
+                        <video width="640" height="360" controls>
+                            <source src="../files/FlappyML.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </li>
+            </ul>
+            <p>Should any of the links be private or point to non-existent resources, please <a href="#contact">contact</a> me</p>
+        </section>
+
+        <section id="skills" class="section section-card skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category gradient-primary">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category gradient-secondary">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>ML &amp; Data Science</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">SciPy</span>
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                    </div>
+                </div>
+
+                <div class="skill-category gradient-tertiary">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Robotics &amp; Control</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ROS</span>
+                        <span class="skill-tag">CasADi</span>
+                        <span class="skill-tag">acados</span>
+                    </div>
+                </div>
+
+                <div class="skill-category gradient-accent">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Web &amp; DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category gradient-aqua">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud &amp; Data Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">MS Fabric</span>
+                    </div>
+                </div>
+
+                <div class="skill-category gradient-mint">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Business Intelligence</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PowerBI</span>
+                        <span class="skill-tag">SAP BW</span>
+                        <span class="skill-tag">SAP Analytics Cloud</span>
+                    </div>
+                </div>
+
+                <div class="skill-category gradient-sunrise">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Productivity Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LaTeX</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                    </div>
+                </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Year</th>
-                <th>Experience</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>2025 - Present</td>
-                <td>Leading a team of 6 autonomous system engineers at Formula Student team CURE Mannheim e.V.</td>
-            </tr>
-            <tr>
-                <td>2023 - Present</td>
-                <td>Volunteering at Formula Student team CURE Mannheim e.V. as an autonomous systems engineer</td>
-            </tr>
-            <tr>
-                <td>2023 - 2026</td>
-                <td>Started cooperative bachelor's degree program in Data Science and AI at DHBW Mannheim with DHL</td>
-            </tr>
-            <tr>
-                <td>2023</td>
-                <td>Graduated from high school with Abitur</td>
-            </tr>
-            </tbody>
-        </table>
-        <p class="spoken-languages-title">Spoken Languages</p>
-        <ul>
-            <li>German</li>
-            <li>English</li>
-        </ul>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul class="project-list">
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Electricity consumption and generation forecasting using Deep Learning algorithms for building management</h3>
-                    <p>Year: 2025</p>
-                    <p>Implemented a Bi-LSTM with Attention mechanism to learn global Time series patterns on electricity consumption and electricity generation</p>
-                    <p>Used real realtime electricity meters from thousands of buildings to train model and integrated predictions into PowerBI dashboard</p>
-                    <p>Results were compiled in a graded term paper and project was implemented in a production Microsoft Fabric instance</p>
-                    <p>Technologies used: Python, PySpark, Fabric, PyTorch, pandas</p>
-                    <p>Github repository: <a href="" target="_blank">Repository</a> Does not include paper. If you're interested, please <a href="#contact">contact</a> me directly</p>
-                </div>
-            </li>
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Trajectory Planning algorithm for autonomous racing car</h3>
-                    <p>Year: 2024/25</p>
-                    <p>Implemented a SOTA trajectory planning algorithm in C++ for an autonomous Formula Student car as an optimal control problem</p>
-                    <p>Approach developed in Simulation by alumnus in Formula Student Team</p>
-                    <p>Uses acados C++ Solver to generate time-optimal and jerk-minimal trajectory on track with constraints on acceleration profile</p>
-                    <p>Algorithm validated in a ROS-integrated control-in-the-loop simulation and field-tested at the Formula Student Germany competition</p>
-                    <p>Technologies used: C++, Python, acados, CasADi, ROS</p>
-                </div>
-                <div class="project-media">
-                    <video width="640" height="360" controls>
-                        <source src="../files/MotionPlanning.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </li>
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Path Planning algorithm for autonomous racing car</h3>
-                    <p>Year: 2023/24</p>
-                    <p>Implemented a path planning algorithm in Python for an autonomous formula student car using Delaunay triangulation</p>
-                    <p>Algorithm successfully field-tested and validated at the Formula Student competition in Italy</p>
-                    <p>Later ported into C++ for a drastic performance uplift: ~20ms to less than 1ms </p>
-                    <p>Technologies used: Python, NumPy, SciPy, ROS, C++</p>
-                </div>
-                <div class="project-media">
-                    <video width="640" height="360" controls>
-                        <source src="../files/PathPlanning.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </li>
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Machine Learning Model for Predictive Maintenance</h3>
-                    <p>Year: 2024</p>
-                    <p>Pair project with a fellow student, results were compiled in a graded paper</p>
-                    <p>Built and trained a machine learning model to predict the remaining lifetime of a machine.</p>
-                    <p>Used EDA and feature selection as well as feature engineering algorithms to create an optimized dataset</p>
-                    <p>Model was trained using ensemble methods such as Random Forest and evaluated using cross validation</p>
-                    <p>Additional testing with comparisons between ML Models were done to determine best Model for use case</p>
-                    <p>Technologies used: Python, scikit-learn, TensorFlow, pandas, NumPy</p>
-                    <p>Github repository: <a href="https://github.com/NechZ/Predictive-Maintenance" target="_blank">Repository</a></p>
-                </div>
-            </li>
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Unsupervised Learning Model to Create a Preventive Maintenance Plan for Delivery Service Packing Stations</h3>
-                    <p>Year: 2024</p>
-                    <p>Project using real company data to create and evaluate new maintenance plan, results were compiled in a graded term paper.</p>
-                    <p>Using Big Data methods to aggregate data from different sources and perform clustering and PCA to sort all stations into groups with similar maintenance needs</p>
-                    <p>Technologies used: Python, scikit-learn, pandas, NumPy</p>
-                    <p>Github repository: <a href="https://github.com/NechZ/Praxis_Arbeit1" target="_blank">Repository</a> Does not include paper. If you're interested, please <a href="#contact">contact</a> me directly</p>
-                </div>
-            </li>
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Kahoot clone as Web app</h3>
-                    <p>Year: 2024</p>
-                    <p>Continuation of group project in collaboration with 5 other fellow students</p>
-                    <p>Developed a web app that allows users to create and play quizzes in real-time</p>
-                    <p>Implemented a WebSocket server to handle real-time communication between users</p>
-                    <p>Used Node.js and Express.js to create the backend and HTML, CSS, and JavaScript for the frontend</p>
-                    <p>Technologies used: HTML, CSS, JavaScript, Node.js, Express.js, WS WebSockets</p>
-                    <p>Github repository: <a href="https://github.com/NechZ/Kahoot2.0" target="_blank">Repository</a></p>
-                </div>
-            </li>
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Mobile Game "Cube Game"</h3>
-                    <p>Year: 2021</p>
-                    <p>Developed a mobile endless runner game for Android with Levels and upgradable cosmetics</p>
-                    <p>Uploaded on Samsung Galaxy Store (now offline) and Amazon garnering ~2000 downloads</p>
-                    <p>Technologies used: Unity, C#</p>
-                </div>
-                <div class="project-media">
-                    <video width="180" height="360" controls>
-                        <source src="../files/CubeGame.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </li>
-            <li class="project-item">
-                <div class="project-content">
-                    <h3>Mini Project: Flappy bird with AI Agents</h3>
-                    <p>Year: 2024</p>
-                    <p>Developed a Flappy Bird clone with PyGame, employing a deep neural network and NEAT (Neural Evolution of Augmenting Topologies) to train AI agents.</p>
-                    <p>Technologies used: Python, PyGame, NEAT-Python</p>
-                    <p>Github repository: <a href="https://github.com/NechZ/Flappy-Bird-ML" target="_blank">Repository</a></p>
-                </div>
-                <div class="project-media">
-                    <video width="640" height="360" controls>
-                        <source src="../files/FlappyML.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </li>
-        </ul>
-        <p>Should any of the links be private or point to non-existent resources, please <a href="#contact">contact</a> me</p>
-    </section>
-
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <div class="skill-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>Programming Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">JavaScript</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3>ML &amp; Data Science</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">PyTorch</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">scikit-learn</span>
-                    <span class="skill-tag">SciPy</span>
-                    <span class="skill-tag">pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <h3>Robotics &amp; Control</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">ROS</span>
-                    <span class="skill-tag">CasADi</span>
-                    <span class="skill-tag">acados</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Web &amp; DevOps</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express.js</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Git</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-icon">
-                    <i class="fas fa-cloud"></i>
-                </div>
-                <h3>Cloud &amp; Data Platforms</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">Databricks</span>
-                    <span class="skill-tag">MS Fabric</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-icon">
-                    <i class="fas fa-chart-bar"></i>
-                </div>
-                <h3>Business Intelligence</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">PowerBI</span>
-                    <span class="skill-tag">SAP BW</span>
-                    <span class="skill-tag">SAP Analytics Cloud</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>Productivity Tools</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">LaTeX</span>
-                    <span class="skill-tag">Microsoft Office</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
+        <section id="contact" class="section section-card contact">
         <h2>Contact</h2>
         <p>If you'd like to get in touch, please reach out via email or LinkedIn.</p>
-        <p>Email: <a href="mailto:nechirvan.zibar@gmail.com">nechirvan.zibar@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/nechirvan-zibar-a1669328b/" target="_blank">LinkedIn</a></p>
-    </section>
+        <div class="contact-links">
+                <a class="link-button" href="mailto:nechirvan.zibar@gmail.com">nechirvan.zibar@gmail.com</a>
+                <a class="link-button" href="https://www.linkedin.com/in/nechirvan-zibar-a1669328b/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        </section>
 
-    <footer>
+    </main>
+
+    <footer class="site-footer">
         <p>&copy; 2025 Nechirvan Zibar. All rights reserved.</p>
     </footer>
 
