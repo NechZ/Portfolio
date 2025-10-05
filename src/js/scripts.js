@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
-            
+
+            // close mobile nav when navigating
+            document.querySelector('nav').classList.remove('open');
+
             window.scrollTo({
                 top: targetSection.offsetTop - 70,
                 behavior: 'smooth'
@@ -57,4 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
         item.classList.add('hidden');
         observer.observe(item);
     });
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    }
 });

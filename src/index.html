@@ -11,6 +11,7 @@
 <body>
     <header>
         <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation"><i class="fa fa-bars" aria-hidden="true"></i></button>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -183,83 +184,50 @@
         <p>Should any of the links be private or point to non-existent resources, please <a href="#contact">contact</a> me</p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="skills">
         <h2>Skills</h2>
-        <p>These are the technologies I work with:</p>
-        <ul>
-            <li>Languages sorted by level of experience:
-            <ul>
-                <li>Python</li>
-                <li>SQL</li>
-                <li>C++</li>
-                <li>C#</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-            </ul>
-            </li>
-            <li>Tools and Frameworks:
-            <ul>
-                <li>Python</li>
+        <p>Technologies &amp; tools grouped by area.</p>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
                 <ul>
-                    <li>Matplotlib</li>
-                    <li>Seaborn</li>
-                    <li>SciPy</li>
-                    <li>scikit-learn</li>
-                    <li>pandas</li>
-                    <li>NumPy</li>
-                    <li>TensorFlow</li>
-                    <li>PyTorch</li>
-                    <li>ROS</li>
-                    <li>CasADi</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
                 </ul>
-                <li>C++</li>
+            </div>
+
+            <div class="skill-category">
+                <h3>Frameworks &amp; Libraries</h3>
                 <ul>
-                    <li>ROS</li>
-                    <li>Eigen</li>
-                    <li>acados</li>
+                    <li>PyTorch, TensorFlow</li>
+                    <li>scikit-learn, SciPy</li>
+                    <li>pandas, NumPy</li>
+                    <li>ROS, CasADi, acados</li>
                 </ul>
-                <li>Game Development</li>
+            </div>
+
+            <div class="skill-category">
+                <h3>Web &amp; DevOps</h3>
                 <ul>
-                    <li>Unity</li>
-                    <li>PyGame</li>
+                    <li>Node.js, Express.js</li>
+                    <li>Docker, Git</li>
+                    <li>Azure, Databricks, MS Fabric</li>
                 </ul>
-                <li>Web Development</li>
+            </div>
+
+            <div class="skill-category">
+                <h3>BI &amp; Tools</h3>
                 <ul>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>WS WebSockets</li>
+                    <li>PowerBI, SAP BW, SAP Analytics Cloud</li>
+                    <li>LaTeX, Microsoft Office</li>
                 </ul>
-                <li>Business Intelligence</li>
-                <ul>
-                    <li>SAP BW</li>
-                    <li>SAP Analytics Cloud</li>
-                    <li>PowerBI</li>
-                </ul>
-                <li>Data Engineering</li>
-                <ul>
-                    <li>Databricks</li>
-                    <li>Azure</li>
-                    <li>MS Fabric</li>
-                </ul>
-                <li>General</li>
-                <ul>
-                    <li>Linux</li>
-                    <li>Docker</li>
-                    <li>Git</li>
-                    <li>LaTeX</li>
-                    <li>Microsoft Office</li>
-                </ul>
-            </ul>
-            </li>
-        </ul>
-        <p>Areas of Expertise:</p>
-        <ul>
-            <li>Software Engineering</li>
-            <li>Machine Learning and Data Science</li>
-            <li>Business Intelligence and Data Analytics</li>
-            <li>Game Development</li>
-            <li>Autonomous Systems</li>
-        </ul>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
