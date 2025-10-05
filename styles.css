@@ -5,14 +5,14 @@
     --color-ink: #EAEAEA;
     --color-ink-subtle: #BDBDBD;
     --color-brand: #2E7D32;
-    --color-accent: #607D8B;
+    --color-accent: #6D9886;
     --color-accent-soft: #78909C;
     --color-white: #ffffff;
     --color-slate-rgb: 30, 30, 30;
     --color-brand-rgb: 46, 125, 50;
-    --color-accent-rgb: 96, 125, 139;
-    --color-accent-mid-rgb: 120, 144, 156;
-    --color-accent-soft-rgb: 120, 144, 156;
+    --color-accent-rgb: 109, 152, 134;
+    --color-accent-mid-rgb: 109, 152, 134;
+    --color-accent-soft-rgb: 109, 152, 134;
     --color-white-rgb: 255, 255, 255;
     --color-black-rgb: 0, 0, 0;
     --color-slate-muted-rgb: 189, 189, 189;
@@ -197,7 +197,7 @@ h3 {
 }
 
 .nav-list a:hover {
-    color: var(--color-accent-soft);
+    color: var(--color-white);
     background: rgba(var(--color-accent-rgb), 0.18);
 }
 
@@ -378,7 +378,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background: rgba(var(--color-accent-soft-rgb), 1);
+    background: rgba(var(--color-accent-soft-rgb), 0.3);
 }
 
 /* Projects */
